@@ -1,12 +1,12 @@
 package package1;
 public class BankAccount {
-    private final String AccHolder;
-    private final int AccNumber;
+    private final String accHolder;
+    private final String accNumber;
     private double balance;
 
-    public BankAccount (String AccHolder,int AccNumber, double balance) {
-        this.AccHolder=AccHolder;
-        this.AccNumber=AccNumber;
+    public BankAccount (String accHolder,String accNumber, double balance) {
+        this.accHolder=accHolder;
+        this.accNumber=accNumber;
         this.balance=balance;
     }
 
@@ -17,11 +17,7 @@ public class BankAccount {
 
 //    WITHDRAW
     public void withdraw (double amount ) {
-        if (this.balance >= amount) {
             this.balance -= amount;
-        } else {
-            System.out.println("Insufficient Balance");
-        }
     }
 
 //    display
@@ -29,8 +25,8 @@ public class BankAccount {
         System.out.println("********************************");
         System.out.println("Displaying Bank Details");
         System.out.println("********************************");
-        System.out.println("Account Name = "+ this.AccHolder);
-        System.out.println("Account Number = "+ this.AccNumber);
+        System.out.println("Account Name = "+ this.accHolder);
+        System.out.println("Account Number = "+ this.accNumber);
         System.out.printf("Account Balance = %.2f\n", this.balance);
         System.out.println("********************************");
     }
